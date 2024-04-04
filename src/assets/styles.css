@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: Poppins, 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    grid-area: header;
+}
+
+note-form {
+    grid-area: konten1;
+}
+
+note-list {
+    grid-area: konten2;
+}
+
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns : 750px;
+    justify-content: center;
+    width:800px;
+    max-width:1700px;
+    gap: 10px; 
+
+    grid-template-areas:
+    'header  header header  header'
+    'konten1 konten1 konten1 konten1'
+    'konten2 konten2 konten2 konten2'
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width:auto;
+    }
+    .note-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+} 
+
+@media only screen and (max-width: 736px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width:auto;
+    }
+    .note-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
